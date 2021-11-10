@@ -9,4 +9,8 @@ import scrapy
 class UniversidadesPhonebookItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    phone = scrapy.Field()
+    email = scrapy.Field()
+    position = scrapy.Field()
+    department = scrapy.Field()
