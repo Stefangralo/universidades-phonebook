@@ -10,8 +10,8 @@ class UexSpider(scrapy.Spider):
     def parse(self, response):
         baseurl = 'https://www.unex.es/conoce-la-uex/departamentos'
 
-        for contact in response.css('a[href*=ficha_personal]::attr(href)').getall(): 
-            url = baseurl + contact
+        for contact in response.css('a[href*=ficha_personal]::attr(href)').getall():
+            
             yield scrapy.Request(response.urljoin(contact), self.parse_contact)
 
     def parse_contact(self,response):
