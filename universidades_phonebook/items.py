@@ -14,3 +14,4 @@ class UniversidadesPhonebookItem(scrapy.Item):
     email = scrapy.Field()
     position = scrapy.Field()
     department = scrapy.Field()
+    subject = scrapy.Field()
