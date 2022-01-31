@@ -1,6 +1,5 @@
 import scrapy
 from universidades_phonebook.items import UniversidadesPhonebookItem
-
 class UcaSpider(scrapy.Spider):
     name = 'uca'
     start_urls = ['https://transparencia.uca.es/claustro-profesores-dpto/?dpto=D106', 'https://transparencia.uca.es/claustro-profesores-dpto/?dpto=D107']
