@@ -16,9 +16,12 @@ class Ua_Constitucional_Spider(scrapy.Spider):
         for personal_data in selector.css('tbody > tr'):
             
             item = UniversidadesPhonebookItem()
+            
+            item['department'] = 'Derecho Constitucional'
+            item['email'] = personal_data.css('td:nth-child(3)::text').get()
             item['name'] = personal_data.css('td:nth-child(1)::text').get()
             item['phone'] = personal_data.css('td:nth-child(2)::text').get()
-            item['email'] = personal_data.css('td:nth-child(3)::text').get()
-            item['department'] = 'Derecho Constitucional'
+            
+            item['university'] = 'Universidad de Alicante'
 
             yield item

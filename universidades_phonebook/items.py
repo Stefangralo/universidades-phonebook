@@ -15,3 +15,4 @@ class UniversidadesPhonebookItem(scrapy.Item):
     position = scrapy.Field()
     department = scrapy.Field()
     subject = scrapy.Field()
+    university = scrapy.Field()
